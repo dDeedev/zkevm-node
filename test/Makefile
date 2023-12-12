@@ -483,6 +483,12 @@ run: ## Runs a full node
 	$(RUNL2GASPRICER)
 	$(RUNAGGREGATOR)
 	$(RUNJSONRPC)
+	sleep 3
+	$(RUNEXPLORERL1DB)
+	$(RUNEXPLORERL1)
+	$(RUNEXPLORERL2DB)
+	$(RUNEXPLORERJSONRPC)
+	$(RUNEXPLORERL2)
 
 .PHONY: stop
 stop: ## Stops all services
